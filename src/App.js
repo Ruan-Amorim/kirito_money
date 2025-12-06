@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getGlobalQuote } from './componentes/services/alphaService.js';
 import { TickersB3, tratarTickersB3 } from "./componentes/services/B3_data.js";
 import CategoriasTickers from "./componentes/categorias/tickers.js";
-import kirito_image from "../public/kirito_image";
+import kirito_image from "./kirito_image.jpg";
 
 import './index.css';
 
@@ -45,7 +45,10 @@ function App() {
 
   return (
     <>
-      <h1><img src={kirito_image} id="logo"></img>Kirito Money</h1>
+      <header> 
+        <img src={kirito_image} id="logo" /> 
+        <h1>Kirito Money</h1>
+      </header>
       <p>Abra o console para ver os dados recebidos.</p>
       <CategoriasTickers />
     </>
