@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kirito_money/static/css/main.2d898c37.css",
+    "main.js": "/kirito_money/static/js/main.d5ad74b7.js",
+    "static/js/453.27b8cd7a.chunk.js": "/kirito_money/static/js/453.27b8cd7a.chunk.js",
+    "static/media/kirito_image.jpg": "/kirito_money/static/media/kirito_image.b162f8cc635e6af8e6dc.jpg",
+    "index.html": "/kirito_money/index.html",
+    "main.2d898c37.css.map": "/kirito_money/static/css/main.2d898c37.css.map",
+    "main.d5ad74b7.js.map": "/kirito_money/static/js/main.d5ad74b7.js.map",
+    "453.27b8cd7a.chunk.js.map": "/kirito_money/static/js/453.27b8cd7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d898c37.css",
+    "static/js/main.d5ad74b7.js"
+  ]
+}
