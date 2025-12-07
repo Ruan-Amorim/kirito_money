@@ -21,11 +21,48 @@ const CategoriasTickers = () => {
                 {listTickers.length === 0 && <li>Carregando...</li>} {/* opcional */}
 
                 {listTickers.map(ticker => (
-                    <li key={ticker}>{ticker}</li>
+                    <li key={ticker} onClick={() => clickTicker(ticker)}>{ticker}</li>
                 ))}
             </ul>
         </section>
     );
+}
+
+export async function clickTicker(symbol) {
+    let tickersPorCategoria = awaitbuscaCategoriaTicker(symbol);
+
+    return(
+        <>
+            <section className="containerOpenCategoriaTickers">
+                <ul>
+                    {tickersPorCategoria.length === 0 && <li>Carregando...</li>} {/* opcional */}
+
+                    {tickersPorCategoria.map(ticker => (
+                        <li key={ticker.code}>{ticker.name} & {ticker.code}</li>
+                    ))}
+                </ul>
+            </section>
+        </>
+    );
+}
+
+export async function buscaCategoriaTicker(nome) {
+    let listaTickers = await TickersB3();
+    let list = [];
+    
+    for (let x = 0; x < listaTickers.length; x++) {
+        if (nome === listaTickers[x].especPapel) {
+            list.push({
+                "name": listaTickers[x].nomeCurto,
+                "code": listaTickers[x].codNeg,
+                "symbol": nome,
+            });
+        } else {
+
+        }
+        
+    }
+    return(list);
 }
 
 export default CategoriasTickers;
